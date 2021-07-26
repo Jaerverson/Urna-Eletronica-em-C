@@ -1,6 +1,6 @@
 - 👋 Hi, I'm @Wagner-tech7
-- 👀'm interested in learning about technology, upgrading and working in the field 
-- 🌱'm learning JS, HTML, CSS, C
+- 👀 I'm interested in learning about technology, upgrading and working in the field 
+- 🌱 I'm learning JS, HTML, CSS, C
 - 📫 How to get to me: 
 Instagram @waggnerr_ 
 personal email: jaerversonwagner@gmail.com
