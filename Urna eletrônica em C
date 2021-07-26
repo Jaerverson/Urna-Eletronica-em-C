@@ -1,0 +1,254 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+
+    int i1, op, branco1, numCand=1, numCand2=1, numdopresidente1, numdopresidente2, branco2, senha=40028922, senha2=40028922 , i, vbrancos1=0, vbrancos2=0, qtd_votantes = 0, vrep1=0, vrep2=0, vrep3=0, vrep4=0, vrep5=0, vnulo=0, vpresidente1=0, vpresidente2=0, vnulo2=0, vbranco2=0;
+    char NomeP1[41], NomeP2[41], rep1[41], rep2[41], rep3[41], rep4[41], rep5[41], Nrep1[6], Nrep2[6], Nrep3[6], Nrep4[6], Nrep5[6];
+    system("color E");
+
+            printf("========================================================\n");
+            printf("      --Bem-vindo a ''URNA ESTUDANTIL DA UFERSA''--\n");
+            printf("========================================================\n");
+                do{
+                    printf("Digite a senha de acesso: ");
+                    fflush(stdin);
+                    scanf("%i", &senha); // senha 40028922
+                        if(senha != 40028922){
+                            printf("Senha incorreta,tente novamente.\n");
+                        }
+                }while(senha != 40028922);
+
+                    printf("*Senha correta, Prossiga*\n");
+                        do{
+                            printf("==========================================================\n");
+                            printf("|   1 - Iniciar votacao                                  |\n");
+                            printf("|   2 - Definir quantidade de votantes                   |\n");
+                            printf("|   3 - Contabilizar votos                               |\n");
+                            printf("|   4 - Cadastrar candidatos                             |\n");
+                            printf("|   5 - Sair                                             |\n");
+                             printf("=========================================================\n");
+                             fflush(stdin);
+                            scanf("%i", &op);
+                            if(op > 5 || op <= 0){
+                                printf("Opcao invalida!\n");
+                                fflush(stdin);
+                                scanf("%i", &op);
+                            }
+                            system("pause");
+                            system("cls");
+                            switch (op){
+                            case 1:
+                                    for (i = 0; i < qtd_votantes; i++){
+                                    
+
+                                            printf(" --------------------------------------------------\n");
+                                            printf(" |       -------       |    |  1  |  2  |  3 |    |\n");
+                                            printf(" |       |  |  |       |    |  4  |  5  |  6 |    |\n");
+                                            printf(" |       |__|__|       |    |  7  |  8  |  9 |    |\n");
+                                            printf(" |     --------------  |          |  0  |         |\n");
+                                            printf(" |    | Voto para    | | ________________________ |\n");
+                                            printf(" |    | Representante| ||        |      |        ||\n");
+                                            printf(" |    | Estudantil   | ||Confirma|Branco|Corrigir||\n");
+                                            printf(" |     --------------  ||________|______|________||\n");
+                                            printf(" -------------------------------------------------\n\n");
+                                            printf("Deseja votar Branco (1)sim (2)nao\n");
+                                            fflush(stdin);
+                                            scanf("%i", &branco1);
+                                            branco1 == 1 ? printf("voto branco") : scanf("%i", &numCand);
+                                            vbrancos1+=1;
+                                                if(numCand == Nrep1){
+                                                    printf("Candidato %s\n", rep1);
+                                                    vrep1+= 1;
+                                                }   else if(numCand==Nrep2){
+                                                        printf("Candidato %s\n", rep2);
+                                                            vrep2+= 1;
+                                                    }   else if(numCand==Nrep3){
+                                                            printf("Candidato %s\n", rep3);
+                                                                vrep3+= 1;
+                                                        }   else if(numCand==Nrep4){
+                                                                printf("Candidato %s\n", rep4);
+                                                                    vrep4+= 1;
+                                                            }   else if(numCand==Nrep5){
+                                                                    printf("Candidato %s\n", rep5);
+                                                                        vrep5+= 1;
+                                                                }    else if(numCand == 00){
+                                                                        printf("Voto Nulo\n");
+                                                                            vnulo+= 1;
+                                                                    }   else{
+                                                                                printf("Candidato invalido\n");
+                                                                            } numCand-=1;
+                                            printf(" --------------------------------------------------\n");
+                                            printf(" |       -------       |    |  1  |  2  |  3 |    |\n");
+                                            printf(" |       |  |  |       |    |  4  |  5  |  6 |    |\n");
+                                            printf(" |       |__|__|       |    |  7  |  8  |  9 |    |\n");
+                                            printf(" |     --------------  |          |  0  |         |\n");
+                                            printf(" |    | Voto para    | | ________________________ |\n");
+                                            printf(" |    | Presidente   | ||        |      |        ||\n");
+                                            printf(" |    | do Gremio    | ||Confirma|Branco|Corrigir||\n");
+                                            printf(" |     --------------  ||________|______|________||\n");
+                                            printf(" -------------------------------------------------\n\n");
+                                            printf("Deseja votar Branco (1)sim (2)nao\n");
+                                            fflush(stdin);
+                                            scanf("%i", &branco2);
+                                            branco2 == 1 ? printf("voto branco") : scanf("%i", &numCand2);
+                                            vbranco2 += 1; 
+                                                if(numCand2 == numdopresidente1){
+                                                    printf("Candidato %s \n", NomeP1);
+                                                        vpresidente1+= 1;
+                                                }   else if(numCand2==numdopresidente2){
+                                                        printf("Candidato %s \n",NomeP2);
+                                                            vpresidente2 += 1;
+                                                    }   else if(numCand2 == 00){
+                                                            printf("Voto Nulo\n");
+                                                                    vnulo2+= 1;
+                                                        }   else{
+                                                                    printf("Candidato invalido\n");
+                                                                } numCand2-=1;  
+                                                                 printf("FIM.\n");
+                                        fflush(stdin);
+                                        system("pause");
+
+                                                            system("cls");
+                                                                do{
+                                                                    scanf("%i", &senha2); // senha 40028922
+                                                                    if(senha2 != 40028922){
+                                                                        printf("Senha incorreta,tente novamente.\n");
+                                                                        
+                                                                    }
+                                                                }while(senha2 != 40028922);
+                                                            system("cls");
+
+                                    }
+                                system("color E");
+                                break;
+                                case 2:
+
+                                    printf("========================================================\n");
+                                    printf("            Insira a Quantidade de votantes:\n");
+                                    printf("========================================================\n");
+                                    fflush(stdin);
+                                    scanf("%i", &qtd_votantes);
+
+                                    system("pause");
+                                    system("cls");
+
+                                break;
+                                case 3:
+                                  
+                                    printf("========================================================\n");
+                                    printf("\tContabilizacao dos votos\n");
+                                    printf("========================================================\n\n");
+                                    printf("Total de votantes: %i\n", qtd_votantes);
+                                    printf("\tRepresentante Estudantil\n\n");
+                                    printf("Candidato %s com %i votos\n", rep1, vrep1);
+                                    printf("Candidato %s com %i votos\n", rep2, vrep2);
+                                    printf("Candidato %s com %i votos\n", rep3, vrep3);
+                                    printf("Candidato %s com %i votos\n", rep4, vrep4);
+                                    printf("Candidato %s com %i votos\n", rep5, vrep5);
+                                    printf("Votos Brancos %i\n", vbrancos1);
+                                    printf("Votos Nulos %i\n\n", vnulo);
+                                    printf("========================================================\n");
+                                    printf("\tPresidente do Gremio\n");
+                                    printf("Candidato %s com %i votos\n", NomeP1 , vpresidente1);
+                                    printf("Candidato %s com %i votos\n", NomeP2, vpresidente2);
+                                    printf("Votos Brancos %i\n", vbrancos2);
+                                    printf("Votos Nulos %i\n\n", vnulo2);
+                                    printf("========================================================\n\n");
+
+                                    system("pause");
+                                    system("cls");
+                                break;
+                                case 4:
+
+                                /*-------------------------------------------------------------------------------------*/
+
+                                    printf("========================================================================\n");
+                                    printf("inserir candidatos:\n");
+                                    printf("insira os candidatos para representante estudantil:\n");
+                                    printf("========================================================================\n\n");
+                                /*-------------------------------------------------------------------------------------*/
+
+                                    printf("Entre com o nome e o numero do primeiro candidato a representante estudantil:\n\n");
+                                    printf("Nome:");
+                                    fflush(stdin);
+                                    scanf ("%[^\n]s", &rep1);
+                                    printf("Numero: ");
+                                    fflush(stdin);
+                                    scanf ("%s", &Nrep1);
+
+                                /*-------------------------------------------------------------------------------------*/
+
+                                    printf("Entre com o nome e o numero do segundo candidato a representante estudantil:\n\n");
+                                    printf("Nome: ");
+                                    fflush(stdin);
+                                    scanf ("%[^\n]s", &rep2);
+                                    printf("Numero: ");
+                                    fflush(stdin);
+                                    scanf ("%s", &Nrep2);
+                                /*-------------------------------------------------------------------------------------*/
+
+                                    printf("Entre com o nome e o numero do terceiro candidato a representante estudantil:\n\n");
+                                    printf("Nome: ");
+                                    fflush(stdin);
+                                    scanf ("%[^\n]s", &rep3);
+                                    printf("Numero: ");
+                                    fflush(stdin);
+                                    scanf ("%s", &Nrep3);
+                                /*-------------------------------------------------------------------------------------*/
+                                    printf("Entre com o nome e o numero do quarto candidato a representante estudantil:\n\n");
+                                    printf("Nome: ");
+                                    fflush(stdin);
+                                    scanf ("%[^\n]s", &rep4);
+                                    printf("Numero: ");
+                                    fflush(stdin);
+                                    scanf ("%s", &Nrep4);
+                                /*-------------------------------------------------------------------------------------*/
+                                    printf("Entre com o nome e o numero do quinto candidato a representante estudantil:\n\n");
+                                    printf("Nome: ");
+                                    fflush(stdin);
+                                    scanf ("%[^\n]s", &rep5);
+                                    printf("Numero: ");
+                                    fflush(stdin);
+                                    scanf ("%s", &Nrep5);
+                                /*-------------------------------------------------------------------------------------*/
+                                    printf("========================================================================\n");
+                                    printf("Entre com o nome e o numero dos candidatos a presidencia do gremio:\n\n");
+                                    printf("========================================================================\n\n");
+                                /*-------------------------------------------------------------------------------------*/
+                                    printf("Entre com o nome e o numero do primeiro candidato:\n");
+                                    printf("Nome: ");
+                                    fflush(stdin);
+                                    scanf ("%[^\n]s",  &NomeP1);
+                                    printf("Numero: ");
+                                    fflush(stdin);
+                                    scanf ("%s", &numdopresidente1);
+                                /*-------------------------------------------------------------------------------------*/
+                                    printf("Entre com o nome e o numero do segundo candidato:\n");
+                                    printf("Nome: ");
+                                    fflush(stdin);
+                                    scanf ("%[^\n]s",  &NomeP2);
+                                    printf("Numero: ");
+                                    fflush(stdin);
+                                    scanf ("%s", &numdopresidente2);
+                                /*-------------------------------------------------------------------------------------*/
+                                    system("cls");
+                                    system("pause");
+                                break;
+                                case 5:
+                                    printf("saindo...\n\n");
+                                    printf("========================================================\n");
+                                    printf("  --Obrigado por usar a ''URNA ESTUDANTIL DA UFERSA''-- \n");
+                                    printf("========================================================\n");
+                                break;
+                                default:
+
+                                    printf("\nOpcao invalida!\n\n");
+                                    system("pause");
+
+                            }
+                        }while (op != 5);
+system("pause");
+return (0);
+}
