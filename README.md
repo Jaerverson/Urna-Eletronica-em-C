@@ -2,7 +2,7 @@
 - 👀 I'm interested in learning about technology, upgrading and working in the field 
 - 🌱 I'm learning JS, HTML, CSS, C
 - 📫 How to get to me: 
-Instagram @waggnerr_ 
+Instagram @jaerverson 
 personal email: jaerversonwagner@gmail.com
 
 
